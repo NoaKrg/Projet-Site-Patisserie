@@ -71,6 +71,7 @@ body {
     width: 25px;
     height: 3px;
     background-color: #1f2937;
+    transition: all 0.3s ease;
 }
 
 .bouton-menu-burger.actif .ligne-burger:first-child {
@@ -581,6 +582,18 @@ body {
     font-weight: bold;
 }
 
+/* Animation de tremblement pour le téléphone */
+@keyframes shake {
+    0%, 100% { transform: translateX(0) rotate(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px) rotate(-2deg); }
+    20%, 40%, 60%, 80% { transform: translateX(2px) rotate(2deg); }
+}
+
+.icone-social.telephone:hover {
+    animation: shake 0.5s ease-in-out;
+    background-color: #ffffff !important;
+}
+
 /* Pied de page - RÉORGANISÉ */
 .pied-de-page {
     position: relative;
@@ -661,6 +674,7 @@ body {
     color: #000000;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
 
 .icone-social:hover {
@@ -813,7 +827,6 @@ body {
         gap: 3rem;
     }
     
-    /* Suivez-nous reste sur toute la largeur en première ligne */
     .colonne-pied-de-page:first-child {
         grid-column: 1 / -1;
         text-align: center;

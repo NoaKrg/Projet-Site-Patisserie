@@ -77,3 +77,19 @@ window.addEventListener('resize', function() {
         navigation.classList.remove('cache');
     }
 });
+
+// Animation tremblement téléphone - version améliorée
+var telephoneIcon = document.querySelector('.icone-social.telephone');
+
+if (telephoneIcon) {
+    telephoneIcon.addEventListener('mouseenter', function() {
+        this.style.animation = 'none';
+        setTimeout(() => {
+            this.style.animation = 'shake 0.5s ease-in-out';
+        }, 10);
+    });
+    
+    telephoneIcon.addEventListener('animationend', function() {
+        this.style.animation = '';
+    });
+}
